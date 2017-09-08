@@ -21,7 +21,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"><!-- default-init-
 			<value>1</value>
 		</constructor-arg>
 		<constructor-arg>
-			<value>Siddhartha</value>
+			<value>${emp.name}</value>
 		</constructor-arg>
 
 		<property name="roles">
@@ -41,5 +41,12 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"><!-- default-init-
 	
 	<bean class="org.practice.DemoBeanPostProcessor" />
 	<bean class="org.practice.DemoBeanPostProcessor1" />
+	<bean class="org.practice.DemoBeanFactoryPostProcessor" />
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:spring_app.properties</value>
+		</property>
+	</bean>
 
 </beans>

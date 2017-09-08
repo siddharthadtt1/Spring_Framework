@@ -65,4 +65,9 @@ public class Employee implements InitializingBean, DisposableBean {
 		System.out.println("Employee bean is initialized ..");
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", roles=" + roles + "]";
+	}
+	
 }
